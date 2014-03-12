@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CLI Emulator</title>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.mousewheel-min.js"></script>
+    <script src="js/jquery.terminal-min.js"></script>
+    <link href="css/jquery.terminal.css" rel="stylesheet"/>
+    <script>
+    jQuery(document).ready(function($) {
+        $('body').terminal("http://localhost:3000/command", {
+            greetings: "Last login: Thu Mar  6 20:51:16 on ttys004\n",
+            onBlur: function() {
+              return false;
+            }
+        });
+    });
+    </script>
+  </head>
+<body>
+</body>
