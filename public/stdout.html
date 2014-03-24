@@ -10,7 +10,7 @@
     <script src="js/client.js"></script>
     <link href="css/jquery.terminal.css" rel="stylesheet"/>
     <script>
-        var socket = io.connect('http://localhost:3000');
+        var socket = io.connect();
         socket.emit('user-join', 'command' );
         jQuery(document).ready(function($) {
             var term = $('body').terminal(function(command, term) {
