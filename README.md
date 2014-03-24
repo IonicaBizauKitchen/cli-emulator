@@ -52,6 +52,6 @@ are the ways to let me know, in order of likelihood for a speedy resolution:
 
 ## License
 
-cli-emulator is [MIT licensed](/glenngillen/cli-emulator/blog/master/LICENSE)
+cli-emulator is [MIT licensed](/LICENSE)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-46840117-1/cli-emulator/readme?pixel)](https://github.com/igrigorik/ga-beacon)
