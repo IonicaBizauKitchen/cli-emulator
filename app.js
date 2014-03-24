@@ -13,9 +13,11 @@ io.sockets.on('connection', function(client){
 		if (username == 'command') client.join('command')
 	}
 	function receiveCommand(msg) {
+		console.log(msg);
 		client.broadcast.to('command').emit('stdin', msg.command);
 	}
 	function commandResponse(msg) {
+		console.log(msg);
 		client.broadcast.to('user').emit('stdout', msg.command);
 	}
 });

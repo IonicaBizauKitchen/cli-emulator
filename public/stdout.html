@@ -11,15 +11,14 @@
     <link href="css/jquery.terminal.css" rel="stylesheet"/>
     <script>
         var socket = io.connect('http://localhost:3000');
+        socket.emit('user-join', 'command' );
         jQuery(document).ready(function($) {
-		socket.emit('user-join', 'command' );
-                $('body').terminal(function(command, term) {
-                    socket.on('stdin', function(data) {
-                        term.echo('$ ' + data);
-                    });
-                    socket.emit('stdout', { command: command });
-                }, { prompt: '$ ',
-                     greetings: 'STDOUT command response faker\n' })
+            var term = $('body').terminal(function(command, term) {
+                socket.emit('stdout', { command: command });
+            }, { prompt: '$ ', greetings: 'STDOUT command response faker\n' })
+            socket.on('stdin', function(data) {
+                term.echo('$ ' + data);
+            });
         });
     </script>
   </head>
