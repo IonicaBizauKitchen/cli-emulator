@@ -12,16 +12,14 @@
     <script>
         var socket = io.connect('http://localhost:3000');
         jQuery(document).ready(function($) {
-		socket.emit('user-join', 'user' );
+		socket.emit('user-join', 'command' );
                 $('body').terminal(function(command, term) {
-                    socket.on('stdout', function(data) {
-                        term.echo(data);
-			term.resume();
+                    socket.on('stdin', function(data) {
+                        term.echo('$ ' + data);
                     });
-                    socket.emit('stdin', { command: command });
-		    term.pause();
+                    socket.emit('stdout', { command: command });
                 }, { prompt: '$ ',
-                     greetings: 'Last login: Thu Mar 20 11:43:56 on ttys008\n' })
+                     greetings: 'STDOUT command response faker\n' })
         });
     </script>
   </head>
