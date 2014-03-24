@@ -11,7 +11,7 @@ app.get('/js/socket.io.js', function(req, res) {
 });
 
 server.listen(port, function() {
-	console.log("Express server lisening on port %d in %s mode", server.address().port, server.settings.env);
+	console.log("Express server lisening on port %d", server.address().port);
 });
 
 io.sockets.on('connection', function(client){
