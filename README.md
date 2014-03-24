@@ -43,12 +43,7 @@ and [http://cli-emulator.herokuapp.com/](http://cli-emulator.herokuapp.com) resp
 
 ## Contributing
 
-If you think you've found a bug or have a feature you'd like to contribute here
-are the ways to let me know, in order of likelihood for a speedy resolution:
-
-* Fork the repo, add a test, implement the feature, send me a pull request
-* Fork the repo, add a failing test, send me a pull request
-* Create an issue on GitHub to let me know what you'd like to see
+If you think you've found a bug or have a feature you'd like to contribute here create an issue on GitHub to let me know what you'd like to see.
 
 ## License
 
