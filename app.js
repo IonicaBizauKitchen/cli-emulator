@@ -1,4 +1,4 @@
-var port = Number(process.env.port || 3000),
+var port = Number(process.env.PORT || 3000),
     express = require('express'),
     app = express(),
     server = require('http').createServer(app),
